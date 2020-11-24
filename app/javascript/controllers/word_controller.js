@@ -43,7 +43,12 @@ export default class extends Controller {
       e.preventDefault();
       e.stopImmediatePropagation();
 
-      this.play();
+      // If the word is the ayah number badge, do not do anything
+      // otherwise, play the sound
+      if(this.el.className.includes("end")) {}
+      else {
+        this.play();
+      }
     });
 
     this.el = el;
